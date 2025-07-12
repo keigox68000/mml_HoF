@@ -59,8 +59,12 @@ class MMLPlayer:
         c7 = "L16O5 [r V10 cgfg e-gdg cg<b>g cgdg V30cgfge-gdgcg<b>gcgdg V40cgfg e-gdg cg<b>g cgd V80<rgbb>d8ddrdrdd8d8]2"
         c8 = "V80 O4L8 c2.r<b- a-2.g4 f2g2 a-2b-2 O5 g1r1"
 
-        d1 = t + "@1L8 @3 @ENV 5{100,8,20,20,0}"
-        d2 = ""
+        d1 = t + "@1L8 @3 @ENV 5{100,4,20,10,0} V20"
+        d2 = "V20 L8 O7cc O9a O7c O7cO9a16a16 O7c16O9aO7c16 O7c16c16cO9aO7ccO9a16a16 O7c16O7aa16"
+        d3 = "[O7ccO9cO7c ccO9aa16a16]12 [O7ccO9cO7c ccO9aa16a16]2"
+        d4 = "[O7cc16c16 O9aO7c cc16c16 O9a16O7c16O9a16O7c16]3 O7cc16c16 O9aO7c cc16c16 O9a16O7c16O9a16a16"
+        d5 = "[O7ccO9aO7c]3 O7ccO9aa16O7c16 L16 O7ccO9aO7cccO9aaO7ccO9aO7cccO9aa O7ccO9aO7cccO9aaO7ccO9aaO7cO9aaa"
+        d6 = "L8 O7ccO9aO7c cO9a16a16O7c16O9aO7c16 c16c16cO9aO7c cO9a16a16 O7c16O9aa16"
         # d2 = "V10[O8a8]"
 
         pyxel.sounds[0].mml(
@@ -72,7 +76,7 @@ class MMLPlayer:
         pyxel.sounds[2].mml(
             c1 + c2 + l1 + c3 + c4 + c4 + c5 + c4 + c4 + c5 + c6 + c7 + c8 + l2
         )
-        pyxel.sounds[3].mml(d1)
+        pyxel.sounds[3].mml(d1 + d2 + l1 + d2 + d3 + d4 + d4 + d5 + d6 + l2)
 
         # 3つのサウンドを組み合わせてミュージック1を作成
         pyxel.musics[0].set([0], [1], [2], [3])
